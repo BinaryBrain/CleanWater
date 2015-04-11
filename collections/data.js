@@ -1,5 +1,9 @@
 Data = new Mongo.Collection("data");
 Data.attachSchema(new SimpleSchema({
+	locationId: {
+		type: String,
+		label: "LocationID"
+	},
 	note: {
 		type: Number,
 		label: "Note",

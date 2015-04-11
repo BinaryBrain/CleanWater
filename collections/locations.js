@@ -1,4 +1,4 @@
-Location = new Mongo.Collection("location");
+Locations = new Mongo.Collection("locations");
 
 PositionSchema = new SimpleSchema({
 	type: {
@@ -14,7 +14,7 @@ PositionSchema = new SimpleSchema({
 	}
 });
 
-Location.attachSchema(new SimpleSchema({
+Locations.attachSchema(new SimpleSchema({
 	location: {
 		type: PositionSchema,
 		index: '2dsphere'
