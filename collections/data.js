@@ -8,7 +8,7 @@ Data.attachSchema(new SimpleSchema({
 		type: Number,
 		label: "Note",
 		max: 10,
-		max: 0
+		min: 0
 	},
 	labName: {
 		type: String,
@@ -18,9 +18,7 @@ Data.attachSchema(new SimpleSchema({
 	labName: {
 		type: Date,
 		label: "Date of measure",
-		defaultValue: function () {
-			return new Date();
-		}
+		defaultValue: new Date()
 	},
 	"measure.$.name" : {
 		type: String,
