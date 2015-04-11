@@ -10,7 +10,6 @@ if (Meteor.isClient) {
 
 	Template.body.events({
 		'click #openform': function () {
-			console.log(Session.get("formopened"));
 			Session.set("formopened", !Session.get("formopened"))
 		}
 	});
