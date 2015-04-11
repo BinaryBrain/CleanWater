@@ -1,0 +1,16 @@
+#openform {
+	width: 50px;
+	height: 50px;
+	
+	top: 50px;
+	right: 50px;
+	
+	position: absolute;
+	z-index: 1000;
+	
+	background-color: red;
+}
+
+#labform {
+	width: 50%
+}
