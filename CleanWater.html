@@ -3,18 +3,15 @@
 </head>
 
 <body>
-	<div id="map">
-		{{> map}}
-	</div>
+	{{> map}}
+	{{> openform}}
+	{{> buttonadd}}
 	
-	<div id="openform">
-		{{> openform}}
-	</div>
 	{{#if formOpened}}
-		<div id="labformContainer">
-			<div id="labform">
-				{{> labform}}
-			</div>
-		</div>
+		{{> labform}}
+	{{/if}}
+	
+	{{#if addOpened}}
+		{{> addpoint}}
 	{{/if}}
 </body>

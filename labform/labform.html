@@ -1,7 +1,12 @@
 <template name="openform">
+<div id="openform"></div>
 </template>
 
 <template name="labform">
-	<h2>Water analysis</h2>
-	{{> quickForm id="demo" collection="Data"}}
+	<div id="labformContainer">
+		<div id="labform">
+			<h2>Water analysis</h2>
+			{{> quickForm id="demo" collection="Data"}}
+		</div>
+	</div>
 </template>
