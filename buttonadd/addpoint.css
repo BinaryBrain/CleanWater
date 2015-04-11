@@ -1,7 +1,7 @@
 #buttonadd {
 	background-color: transparent;
 	
-	font-size: 240%;
+	font-size: 235%;
 	text-align: center;
 
 	width: 50px;
@@ -15,4 +15,6 @@
 	
 	position: absolute;
 	z-index: 1000;
+	
+	cursor: pointer;
 }
