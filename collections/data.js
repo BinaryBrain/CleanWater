@@ -2,7 +2,7 @@ Data = new Mongo.Collection("data");
 Data.attachSchema(new SimpleSchema({
 	note: {
 		type: Number,
-		label: "Lab Name",
+		label: "Note",
 		max: 10,
 		max: 0
 	},
