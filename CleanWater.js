@@ -1,7 +1,17 @@
 if (Meteor.isClient) {
+	
+	Session.set("formopened", false);
+	
+	Template.body.helpers({
+		formOpened: function () {
+			return Session.get("formopened");
+		}
+	});
+
 	Template.body.events({
 		'click #openform': function () {
-			console.log("Must open form.");
+			console.log(Session.get("formopened"));
+			Session.set("formopened", !Session.get("formopened"))
 		}
 	});
 }

@@ -13,4 +13,7 @@
 
 #labform {
 	width: 50%
+	
+	position: absolute;
+	z-index: 1001;
 }
