@@ -15,6 +15,13 @@ Data.attachSchema(new SimpleSchema({
 		label: "Lab Name",
 		max: 200
 	},
+	labName: {
+		type: Date,
+		label: "Date of measure",
+		defaultValue: function () {
+			return new Date();
+		}
+	},
 	"measure.$.name" : {
 		type: String,
 		label: "Name"
