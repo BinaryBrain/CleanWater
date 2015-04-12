@@ -23,7 +23,7 @@ if (Meteor.isClient) {
 			Session.set("formOpened", !Session.get("formOpened"));
 		},
 		'click #buttonadd': function () {
-			Session.set("addOpened", !Session.get("addOpened"));
+			Session.set("addOpened", true);
 		},
 		'click #pin': function () {
 			Session.set("infoBoxOpened", true);

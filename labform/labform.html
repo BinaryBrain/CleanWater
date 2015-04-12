@@ -8,7 +8,13 @@
 	<div id="labformContainer">
 		<div id="labform">
 			<h2>Water analysis</h2>
-			{{> quickForm id="demo" collection="Data" type="insert"}}
+			{{#autoForm id="analysisForm" collection="Data" type="insert"}}
+				{{> afQuickFields}}
+				<div>
+					<button id="cancel-form" type="button" class="btn btn-default cancel">Cancel</button>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			{{/autoForm}}
 		</div>
 	</div>
 </template>
