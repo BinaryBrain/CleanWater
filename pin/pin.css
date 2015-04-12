@@ -12,10 +12,10 @@
 	z-index: 1000;
 }
 
-.infoPin {
+.infoBox {
 	background-color: white;
 	
-	padding: 5px;
+	padding: 7px;
 	
 	border: 1px solid black;
 	border-radius: 5px;

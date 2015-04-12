@@ -3,7 +3,7 @@ if (Meteor.isClient) {
 	// events
 	Session.set("formOpened", false);
 	Session.set("addOpened", false);
-	Session.set("infoPinOpened", false);
+	Session.set("infoBoxOpened", false);
 	
 	Template.body.helpers({
 		formOpened: function () {
@@ -12,8 +12,8 @@ if (Meteor.isClient) {
 		addOpened: function () {
 			return Session.get("addOpened");
 		},
-		infoPinOpened: function () {
-			return Session.get("infoPinOpened");
+		infoBoxOpened: function () {
+			return Session.get("infoBoxOpened");
 		}
 	});
 
@@ -25,8 +25,7 @@ if (Meteor.isClient) {
 			Session.set("addOpened", !Session.get("addOpened"));
 		},
 		'click #pin': function () {
-			console.log(Session.get("infoPinOpened"));
-			Session.set("infoPinOpened", !Session.get("infoPinOpened"));
+			Session.set("infoBoxOpened", !Session.get("infoBoxOpened"));
 		}
 	});
 }

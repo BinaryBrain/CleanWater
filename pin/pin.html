@@ -2,9 +2,13 @@
 	<div id="pin"></div>
 </template>
 
-<template name="infoPin">
-	<div class="infoPin">
-		Note: {{note}}
-		Tested by {{labName}} on {{date}}
+<template name="infoBox">
+	<div class="infoBox">
+		<div id="note">
+			Note: {{infos.note}}
+		</div>
+		<div id="tested">
+			Tested by {{infos.labName}} ({{momentFormat infos.date}})
+		</div>
 	</div>
 </template>
