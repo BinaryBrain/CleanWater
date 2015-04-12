@@ -6,5 +6,27 @@
 
 <template name="addpoint">
 	<div id="addpoint">
+		<div class="content">
+			<center>
+				<p>You're about to add a new location.</p>
+				<p>Please have an empty bottle of water with you before proceeding.</p>
+				<button class="btn btn-warning btn-lg" id="cancel-new-location">Cancel</button>
+				<button class="btn btn-success btn-lg" id="add-new-location">Add a new Location</button>
+
+				{{#if newLocationConfirmed}}
+					<div id="new-location-confirmed">
+						<p>Please, take a bottle of water here and send it to the lab with the given tag:</p>
+						{{newLocationTag}}
+					</div>
+				{{/if}}
+
+
+				{{> quickForm id="demo" collection="Locations" type="insert"}}
+
+				{{#if noGeoloc}}
+					<p>You must have geolocation turned on to add new locations.</p>
+				{{/if}}
+			</center>
+		</div>
 	</div>
 </template>

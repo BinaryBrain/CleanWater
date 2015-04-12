@@ -1,5 +1,6 @@
 if (Meteor.isClient) {
-	
+	Geolocation.currentLocation(); // Ask the user to share location
+
 	// events
 	Session.set("formOpened", false);
 	Session.set("addOpened", false);
