@@ -15,7 +15,7 @@ Data.attachSchema(new SimpleSchema({
 		label: "Lab Name",
 		max: 200
 	},
-	labName: {
+	date: {
 		type: Date,
 		label: "Date of measure",
 		defaultValue: new Date()
@@ -29,7 +29,7 @@ Data.attachSchema(new SimpleSchema({
 		label: "Value"
 	},
 	"measure.$.unit" : {
-		type: Boolean,
+		type: String,
 		label: "Unit"
 	}
 }));
