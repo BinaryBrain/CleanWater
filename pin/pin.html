@@ -5,7 +5,7 @@
 <template name="infoBox">
 	<div id="infoBox">
 		<div id="labNote">
-			Note: {{infos.note}}
+			<h3>Note: {{infos.note}}</h3>
 		</div>
 		<div id="tested">
 			Tested by {{infos.labName}} ({{momentFormat infos.date}})
@@ -13,21 +13,41 @@
 		
 		<div id="opinions">
 			<h3>Opinions</h3>
-			{{#each opinions}}
-				{{> opinion}}
-			{{/each}}
+			<ul>
+				{{#each opinions}}
+					{{> opinion}}
+				{{/each}}
+			</ul>
 		</div>
+		
+		{{> addOpinion}}
 		
 	</div>
 </template>
 
 <template name="opinion">
 	<div class="opinion">
-		<div id="opinionNote">
-			Note: {{note}}
-		</div>
-		<div id="comment">
-			{{comment}}
-		</div>
+		<li>
+			<div id="opinionNote">
+				Note: {{note}}
+			</div>
+			<div id="comment">
+				{{comment}}
+			</div>
+		</li>
+	</div>
+</template>
+
+<template name="addOpinion">
+	<div id="addOpinion">
+		<h4>Add your comment</h4>
+		{{#autoForm id="addOpinionForm" collection="Opinions" type="insert"}}	
+			{{> afQuickField name='locationId' value=locationId}}
+			{{> afQuickField name='note'}}
+			{{> afQuickField name='comment'}}
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		{{/autoForm}}
 	</div>
 </template>

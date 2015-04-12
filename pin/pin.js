@@ -12,4 +12,10 @@ if (Meteor.isClient) {
 			return Opinions.find({locationId : testId});
 		}
 	});
+	
+	Template.addOpinion.helpers({
+		locationId: function () {
+			return testId;
+		}
+	});
 }
