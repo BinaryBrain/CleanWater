@@ -5,7 +5,7 @@ if (Meteor.isClient) {
 		}
 	});
 	
-	AutoForm.addHooks(['labQuickForm'], {
+	AutoForm.addHooks(['analysisForm'], {
 		onSuccess: function(operation, result, template) {
 			Session.set("formOpened", false);
 		}
