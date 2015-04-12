@@ -20,15 +20,15 @@ Data.attachSchema(new SimpleSchema({
 		label: "Date of measure",
 		defaultValue: new Date()
 	},
-	"measure.$.key" : {
+	"measures.$.key" : {
 		type: String,
 		label: "Key"
 	},
-	"measure.$.value" : {
+	"measures.$.value" : {
 		type: String,
 		label: "Value"
 	},
-	"measure.$.unit" : {
+	"measures.$.unit" : {
 		type: String,
 		label: "Unit"
 	}

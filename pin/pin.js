@@ -1,9 +1,9 @@
 if (Meteor.isClient) {
 	Session.set("tmpLocationID", "jDkSJwCnDcLrk2TkW");
-	
+
 	Template.infoBox.helpers({
-		infos: function () {
-			return Data.findOne({locationId : Session.get("tmpLocationID")});
+		labs: function () {
+			return Data.find({locationId : Session.get("tmpLocationID")});
 		},
 		momentFormat: function (date) {
 			return moment(date).fromNow();

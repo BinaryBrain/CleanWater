@@ -4,13 +4,23 @@
 
 <template name="infoBox">
 	<div id="infoBox">
-		<div id="labNote">
-			<h3>Note: {{infos.note}}</h3>
-		</div>
 		<div id="tested">
-			Tested by {{infos.labName}} ({{momentFormat infos.date}})
+			<h3>Lab Tests</h3>
+			{{#each labs}}
+				<hr>
+				<h4>{{labName}}: {{momentFormat date}}</h4>
+				<strong>Note: {{note}}/10</strong>
+				<ul>
+					{{#each measures}}
+						<li><strong>{{key}}:</strong> {{value}} {{unit}}</li>
+					{{/each}}
+				</ul>
+			{{/each}}
+			{{#unless labs.count}}
+				<p><em>No lab has tested this water. Be careful.</em></p>
+			{{/unless}}
 		</div>
-		
+		<hr>
 		<div id="opinions">
 			<h3>Opinions</h3>
 			<ul>
@@ -18,6 +28,10 @@
 					{{> opinion}}
 				{{/each}}
 			</ul>
+		
+			{{#unless labs.count}}
+				<p><em>There is no opinion. Add yours!</em></p>
+			{{/unless}}
 		</div>
 		
 		{{> addOpinion}}
