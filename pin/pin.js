@@ -1,21 +1,21 @@
 if (Meteor.isClient) {
-	var testId = "jDkSJwCnDcLrk2TkW";
+	Session.set("tmpLocationID", "jDkSJwCnDcLrk2TkW");
 	
 	Template.infoBox.helpers({
 		infos: function () {
-			return Data.findOne({locationId : testId});
+			return Data.findOne({locationId : Session.get("tmpLocationID")});
 		},
 		momentFormat: function (date) {
 			return moment(date).fromNow();
 		},
 		opinions: function () {
-			return Opinions.find({locationId : testId});
+			return Opinions.find({locationId : Session.get("tmpLocationID")});
 		}
 	});
 	
 	Template.addOpinion.helpers({
 		locationId: function () {
-			return testId;
+			return Session.get("tmpLocationID");
 		}
 	});
 }
