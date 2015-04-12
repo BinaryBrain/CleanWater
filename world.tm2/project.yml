@@ -1,0 +1,30 @@
+_prefs: 
+  mapid: sasha-.712d049d
+  saveCenter: false
+_properties: 
+  bridge: 
+    "group-by": layer
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 15.293
+  - 50.8476
+  - 4
+description: Map for Clean Water project.
+format: "png8:m=h"
+interactivity_layer: ''
+layers: null
+maxzoom: 22
+minzoom: 0
+name: Mapbox Light
+source: "mapbox:///mapbox.satellite,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5,sasha-.d1ef3c90,sasha-.db6d324f"
+styles: 
+  - style.mss
+  - labels.mss
+  - roads.mss
+  - points.mss
+template: ''

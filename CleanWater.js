@@ -32,6 +32,17 @@ if (Meteor.isClient) {
 			Session.set("infoBoxOpened", false);
 		}, 
 	});
+
+	Meteor.startup(function(){
+	    Mapbox.load('minimap', 'markercluster');
+	});
+
+	Deps.autorun(function () {
+	  if (Mapbox.loaded()) {
+	    L.mapbox.accessToken = "pk.eyJ1Ijoic2FzaGEtIiwiYSI6IklRdENMMVkifQ.rCLwn2iAZCV3DhfiCAT5EQ";
+	    var map = L.mapbox.map('map', "sasha-.712d049d");
+	  }
+	});
 }
 
 if (Meteor.isServer) {
