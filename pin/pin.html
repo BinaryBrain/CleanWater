@@ -4,11 +4,30 @@
 
 <template name="infoBox">
 	<div class="infoBox">
-		<div id="note">
+		<div id="labNote">
 			Note: {{infos.note}}
 		</div>
 		<div id="tested">
 			Tested by {{infos.labName}} ({{momentFormat infos.date}})
+		</div>
+		
+		<div id="opinions">
+			<h3>Opinions</h3>
+			{{#each opinions}}
+				{{> opinion}}
+			{{/each}}
+		</div>
+		
+	</div>
+</template>
+
+<template name="opinion">
+	<div class="opinion">
+		<div id="opinionNote">
+			Note: {{note}}
+		</div>
+		<div id="comment">
+			{{comment}}
 		</div>
 	</div>
 </template>

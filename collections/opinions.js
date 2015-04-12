@@ -7,8 +7,8 @@ Opinions.attachSchema(new SimpleSchema({
 	note: {
 		type: Number,
 		label: "Note",
-		max: 10,
-		max: 0
+		min: 0,
+		max: 10
 	},
 	comment: {
 		type: String,

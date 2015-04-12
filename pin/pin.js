@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-	var testId = "TestLoc";
+	var testId = "12345";
 	
 	Template.infoBox.helpers({
 		infos: function () {
@@ -7,6 +7,9 @@ if (Meteor.isClient) {
 		},
 		momentFormat: function (date) {
 			return moment(date).fromNow();
+		},
+		opinions: function () {
+			return Opinions.find({locationId : testId});
 		}
 	});
 }

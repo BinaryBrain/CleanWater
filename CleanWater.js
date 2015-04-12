@@ -26,8 +26,11 @@ if (Meteor.isClient) {
 			Session.set("addOpened", !Session.get("addOpened"));
 		},
 		'click #pin': function () {
-			Session.set("infoBoxOpened", !Session.get("infoBoxOpened"));
-		}
+			Session.set("infoBoxOpened", true);
+		}, 
+		'click #map': function () {
+			Session.set("infoBoxOpened", false);
+		}, 
 	});
 }
 
