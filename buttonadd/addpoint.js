@@ -9,6 +9,9 @@ if (Meteor.isClient) {
 
 		noGeoloc: function () {
 			return Session.get("noGeoloc");
+		},
+		newLocationTag: function () {
+			return Session.get("newLocationTag");
 		}
 	});
 
@@ -26,8 +29,9 @@ if (Meteor.isClient) {
 				return;
 			}
 
-			newLocationTag = Locations.insert({ type: 'Point', coordinates: [loc.latitude, loc.longitude]});
+			var newLocationTag = Locations.insert({ location: { type: 'Point', coordinates: [loc.coords.latitude, loc.coords.longitude] }});
 
+			Session.set("newLocationTag", newLocationTag);
 			Session.set("newLocationConfirmed", true);
 		}
 	});
