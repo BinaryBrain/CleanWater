@@ -17,11 +17,13 @@
 					<div id="new-location-confirmed">
 						<p>Please, take a bottle of water here and send it to the lab with the given tag:</p>
 						<h2>{{newLocationTag}}</h2>
+						<button class="btn btn-danger btn-lg" id="cancel-new-location">Close</button>
 					</div>
 				{{/if}}
 
 				{{#if noGeoloc}}
 					<p>You must have geolocation turned on to add new locations.</p>
+					<button class="btn btn-danger btn-lg" id="cancel-new-location">Close</button>
 				{{/if}}
 			</center>
 		</div>

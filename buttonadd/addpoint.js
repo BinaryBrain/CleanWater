@@ -17,11 +17,15 @@ if (Meteor.isClient) {
 
 	Template.addpoint.events({
 		'click #cancel-new-location': function () {
-			if (!Session.get("newLocationConfirmed")) {
-				Session.set("addOpened", false);
-			}
+			Session.set("addOpened", false);
+			Session.set("newLocationConfirmed", false);
+			Session.set("noGeoloc", false);
 		},
 		'click #add-new-location': function () {
+			if (Session.get("newLocationConfirmed")) {
+				return;
+			}
+
 			var loc = Geolocation.currentLocation();
 
 			if (loc === null) {
