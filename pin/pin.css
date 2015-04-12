@@ -17,6 +17,9 @@
 	
 	padding: 7px;
 	
+	max-width: 500px;
+	word-wrap: break-word;
+	
 	border: 1px solid black;
 	border-radius: 5px;
 	

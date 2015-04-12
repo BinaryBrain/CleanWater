@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-	var testId = "12345";
+	var testId = "jDkSJwCnDcLrk2TkW";
 	
 	Template.infoBox.helpers({
 		infos: function () {

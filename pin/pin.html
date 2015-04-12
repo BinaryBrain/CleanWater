@@ -40,9 +40,10 @@
 
 <template name="addOpinion">
 	<div id="addOpinion">
+		<hr>
 		<h4>Add your comment</h4>
 		{{#autoForm id="addOpinionForm" collection="Opinions" type="insert"}}	
-			{{> afQuickField name='locationId' value=locationId}}
+			{{> afQuickField name='locationId' value=locationId style="display: none;" readonly=true}}
 			{{> afQuickField name='note'}}
 			{{> afQuickField name='comment'}}
 			<div class="form-group">

@@ -2,7 +2,7 @@ Opinions = new Mongo.Collection("opinions");
 Opinions.attachSchema(new SimpleSchema({
 	locationId: {
 		type: String,
-		label: "LocationID"
+		label: " "
 	},
 	note: {
 		type: Number,
